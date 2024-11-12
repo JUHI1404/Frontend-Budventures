@@ -5,12 +5,12 @@ import AboutUs from './pages/AboutUs';
 import CreatePackage from './pages/CreatePackage';
 import Navbar from './components/Navbar';
 
-
 const Layout = ({ isModalOpen, openModal, closeModal }) => {
   return (
     <>
       <Navbar openModal={openModal} />
       <Outlet />
+      <CreatePackage isModalOpen={isModalOpen} closeModal={closeModal} />
     </>
   );
 };
@@ -40,7 +40,6 @@ function App() {
       ]
     }
   ];
-
 
   const router = createBrowserRouter(routes, {
     future: {
